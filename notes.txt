@@ -18,5 +18,6 @@ app.component.ts
 - the "model"
 
 In app.component.html
-`` (click)="newFunction()" `` => handles a click event calling a function defined in app.component.ts
+- `` (click)="newFunction()" `` => handles a click event calling a function defined in app.component.ts
 #titleReference gives an element a title that can be referenced in other parts of the template
+- use [value]="" (value is just an example) to pass in a property to be evaluated -> Angular expression
