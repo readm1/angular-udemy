@@ -1,0 +1,22 @@
+Angular
+
+index.html (src directory)
+- corresponds to what is displayed on the screen
+- <title> specifies title on tab at top of browser
+- <app-root> and other custom tags refer to the selector at the top of app.component.ts (and other <name>.component.ts files)
+
+app.component.html
+- Displays to the screen, and is referenced by <app-root> tag in index.html
+- Shows other HTML
+- the "view"
+
+app.component.ts
+- properties from export class (ie. title) can be read using {{ title }}
+- @component decorator: "selector" specifies name of custom tag; "templateUrl" specifies path to corresponding .html file; "styleUrls" specifies path to corresponding .css files
+- typescript logic goes here
+- enables you to clearly seperate the data from the html being used to display that data
+- the "model"
+
+In app.component.html
+`` (click)="newFunction()" `` => handles a click event calling a function defined in app.component.ts
+#titleReference gives an element a title that can be referenced in other parts of the template
