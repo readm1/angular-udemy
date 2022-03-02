@@ -1,5 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, ViewChild } from "@angular/core";
 import { COURSES } from "../db-data";
+import { CourseCardComponent } from "./course-card/course-card.component";
 import { Course } from "./model/course";
 
 @Component({
@@ -9,13 +10,16 @@ import { Course } from "./model/course";
 })
 export class AppComponent {
   courses = COURSES;
-  title = COURSES[0].description;
-  price = 9.9872367234789;
-  rate = 0.67;
-  startDate = new Date(2000, 0, 1);
+  // title = COURSES[0].description;
+  // price = 9.9872367234789;
+  // rate = 0.67;
+  // startDate = new Date(2000, 0, 1);
   course = COURSES[0];
 
+  @ViewChild(CourseCardComponent)
+  card: CourseCardComponent;
+
   onCourseSelected(course: Course) {
-    console.log("app component - click event bubbled...", course);
+    console.log(this.card);
   }
 }
