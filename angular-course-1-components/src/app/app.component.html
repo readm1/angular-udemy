@@ -7,24 +7,9 @@
 
 <div class="courses" *ngIf="courses[0] as course">
   <course-card (courseSelected)="onCourseSelected($event)" [course]="course">
-    <div class="course-image">
-      <img
-        class="course-image"
-        width="300"
-        alt="Angular Logo"
-        [src]="course.iconUrl"
-      />
-      <h5>Total Lessons: 5</h5>
-    </div>
+    <course-image [src]="course.iconUrl"></course-image>
     <div class="course-description">
       {{ course.longDescription }}
     </div>
-    Edit Description: <textarea></textarea>
-  </course-card>
-  <course-card
-    (courseSelected)="onCourseSelected($event)"
-    [course]="courses[1]"
-  >
-    <h5>Total Lessons: 10</h5>
   </course-card>
 </div>
